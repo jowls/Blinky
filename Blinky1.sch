@@ -1,0 +1,199 @@
+EESchema Schematic File Version 2
+LIBS:Blinky1-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:GTB
+LIBS:Blinky1-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 7555-RESCUE-Blinky1 U1
+U 1 1 573BBBA4
+P 5750 3750
+F 0 "U1" H 6240 2940 60  0000 C CNN
+F 1 "7555" H 5740 3600 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5750 3700 60  0001 C CNN
+F 3 "" H 5750 3700 60  0000 C CNN
+	1    5750 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 573BBD58
+P 4500 3150
+F 0 "R1" V 4580 3150 50  0000 C CNN
+F 1 "1K" V 4500 3150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4430 3150 50  0001 C CNN
+F 3 "" H 4500 3150 50  0000 C CNN
+	1    4500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 573BBDDD
+P 4500 3850
+F 0 "R2" V 4580 3850 50  0000 C CNN
+F 1 "470K" V 4500 3850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4430 3850 50  0001 C CNN
+F 3 "" H 4500 3850 50  0000 C CNN
+	1    4500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 573BBE23
+P 4500 4550
+F 0 "C1" H 4525 4650 50  0000 L CNN
+F 1 "1U" H 4525 4450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4538 4400 50  0001 C CNN
+F 3 "" H 4500 4550 50  0000 C CNN
+	1    4500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 573BBE88
+P 7050 4150
+F 0 "R3" V 7130 4150 50  0000 C CNN
+F 1 "1K" V 7050 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6980 4150 50  0001 C CNN
+F 3 "" H 7050 4150 50  0000 C CNN
+	1    7050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 573BBEEC
+P 7050 4610
+F 0 "D1" H 7050 4710 50  0000 C CNN
+F 1 "LED" H 7050 4510 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 7050 4610 50  0001 C CNN
+F 3 "" H 7050 4610 50  0000 C CNN
+	1    7050 4610
+	0    -1   -1   0   
+$EndComp
+Text Label 5040 2680 0    60   ~ 0
+VDD
+$Comp
+L GND #PWR01
+U 1 1 573BC3A5
+P 5030 5020
+F 0 "#PWR01" H 5030 4770 50  0001 C CNN
+F 1 "GND" H 5030 4870 50  0000 C CNN
+F 2 "" H 5030 5020 50  0000 C CNN
+F 3 "" H 5030 5020 50  0000 C CNN
+	1    5030 5020
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4960 3540 4500 3540
+Wire Wire Line
+	4500 3300 4500 3700
+Connection ~ 4500 3540
+Wire Wire Line
+	4960 3720 4860 3720
+Wire Wire Line
+	4860 3720 4860 4060
+Wire Wire Line
+	4500 4060 4960 4060
+Wire Wire Line
+	4500 4000 4500 4400
+Connection ~ 4860 4060
+Connection ~ 4500 4060
+Wire Wire Line
+	4500 4700 4500 4890
+Wire Wire Line
+	4500 4890 7050 4890
+Wire Wire Line
+	5440 4890 5440 4680
+Connection ~ 5440 4890
+Wire Wire Line
+	7050 4890 7050 4810
+Wire Wire Line
+	7050 4410 7050 4300
+Wire Wire Line
+	7050 4000 7050 3790
+Wire Wire Line
+	7050 3790 6490 3790
+Wire Wire Line
+	4500 3000 4500 2680
+Wire Wire Line
+	4500 2680 5900 2680
+Wire Wire Line
+	5590 2680 5590 2900
+Wire Wire Line
+	5900 2680 5900 2900
+Connection ~ 5590 2680
+Wire Wire Line
+	5030 5020 5030 4890
+Connection ~ 5030 4890
+$Comp
+L Battery BT1
+U 1 1 573BC43F
+P 3790 3870
+F 0 "BT1" H 3890 3920 50  0000 L CNN
+F 1 "Battery" H 3890 3820 50  0000 L CNN
+F 2 "GTB:S8211R" V 3790 3910 50  0001 C CNN
+F 3 "" V 3790 3910 50  0000 C CNN
+	1    3790 3870
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3790 3720 3790 3150
+Wire Wire Line
+	3790 3150 3990 3150
+Wire Wire Line
+	3790 4020 3790 4320
+$Comp
+L GND #PWR02
+U 1 1 573BC5AA
+P 3790 4320
+F 0 "#PWR02" H 3790 4070 50  0001 C CNN
+F 1 "GND" H 3790 4170 50  0000 C CNN
+F 2 "" H 3790 4320 50  0000 C CNN
+F 3 "" H 3790 4320 50  0000 C CNN
+	1    3790 4320
+	1    0    0    -1  
+$EndComp
+Text Label 3990 3150 2    60   ~ 0
+VDD
+$EndSCHEMATC
